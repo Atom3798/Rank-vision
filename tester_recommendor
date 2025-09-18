@@ -1,0 +1,6 @@
+import pytest
+from rankvision.recommender import RecommendationInput
+
+def test_rec_input_dataclass():
+    x = RecommendationInput(trend="Flat", summary={"avg_rank": 1000}, business_goals=["Grow"])
+    assert x.trend == "Flat"
